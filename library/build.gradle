@@ -28,8 +28,8 @@ apply from: '../common/android-set-common-properties.gradle'
 
 android {
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 27
 
 
         def dataProps = new Properties()
@@ -51,11 +51,12 @@ android {
             consumerProguardFiles 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
 }
 
 tasks.withType(JavaCompile) {
